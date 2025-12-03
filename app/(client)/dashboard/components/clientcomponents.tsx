@@ -875,11 +875,28 @@ const CASH_METHODS: { key: CashMethod; label: string; color: string }[] = [
                 {profilesUsed}/{profilesLimit}
               </span>
             </div>
-            <Progress
+            {/* <Progress
               value={((profilesLimit - profilesUsed) / profilesLimit) * 100}
               className="h-2"
-            />
-
+            /> */}
+{/* custom RTL progress */}
+{(() => {
+  const percent = ((profilesLimit - profilesUsed) / profilesLimit) * 100;
+  return (
+    <div className="relative h-2 bg-blue-200 rounded overflow-hidden">
+      {/* fill aligned to the RIGHT */}
+      <div
+        className="absolute top-0 bottom-0 right-0 rounded transition-all duration-300"
+        style={{
+          width: `${Math.max(0, Math.min(100, percent))}%`,
+          background: "linear-gradient(90deg, rgba(59,130,246,1), rgba(99,102,241,1))",
+          // يمكنك استبدال الخلفية باللون الأساسي لديك:
+          // background: 'var(--colors-primary)'
+        }}
+      />
+    </div>
+  );
+})()}
             {/* Items */}
             {planName === "الخطة المدفوعة" && (
               <div className="space-y-2">
@@ -892,10 +909,30 @@ const CASH_METHODS: { key: CashMethod; label: string; color: string }[] = [
                     {itemsUsed}/{itemsLimit}
                   </span>
                 </div>
-                <Progress
+                {/* <Progress
                   value={((itemsLimit - itemsUsed) / itemsLimit) * 100}
-                  className="h-2"
-                />
+                  className="h-2 "
+                /> */}
+
+                {/* custom RTL progress */}
+{(() => {
+  const percent = ((itemsLimit - itemsUsed) / itemsLimit) * 100;
+  return (
+    <div className="relative h-2 bg-blue-200 rounded overflow-hidden">
+      {/* fill aligned to the RIGHT */}
+      <div
+        className="absolute top-0 bottom-0 right-0 rounded transition-all duration-300"
+        style={{
+          width: `${Math.max(0, Math.min(100, percent))}%`,
+          background: "linear-gradient(90deg, rgba(59,130,246,1), rgba(99,102,241,1))",
+          // يمكنك استبدال الخلفية باللون الأساسي لديك:
+          // background: 'var(--colors-primary)'
+        }}
+      />
+    </div>
+  );
+})()}
+
               </div>
             )}
           </div>
