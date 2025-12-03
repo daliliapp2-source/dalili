@@ -7,7 +7,7 @@ export async function GET(
 
 ) {
   try {
-    const { slug } =await context.params;
+    const { slug } = context.params;
   
     const payload = decryptSlug(slug);
 
