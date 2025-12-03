@@ -83,7 +83,7 @@ const categories = isMock
       <div className="sticky top-0 z-10 bg-background/95 backdrop-blur-sm border-b border-border shadow-sm">
         <div className="max-w-5xl mx-auto px-4 py-4">
           <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide justify-center">
-            {allCategories.map((category) => (
+            {categories.map((category) => (
               <Button
                 key={category}
                 variant={selectedCategory === category ? "default" : "secondary"}
@@ -138,7 +138,7 @@ const categories = isMock
       {/* Footer */}
       <footer className="bg-card border-t border-border py-8 px-4 mt-12">
         <div className="max-w-5xl mx-auto text-center space-y-4">
-          <div className="flex justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-3">
             {profile.socials.map((social) => (
               <Button
                 key={social.id}

@@ -722,6 +722,8 @@ type Props = {
 //   }
 // };
 
+
+
 const PremiumTemplatePC = ({ model }: Props) => {
   const profile = model || profileWithoutMenu;
 
@@ -773,7 +775,7 @@ const PremiumTemplatePC = ({ model }: Props) => {
           {/* Description Card */}
           <div className="rounded-3xl p-8 md:p-10 border-2 border-white/20 shadow-xl backdrop-blur-xl bg-black/30">
             <div className="flex items-start gap-4 mb-4">
-              <div className="w-2 h-12 bg-gradient-to-b from-[#0ff] to-[#f0f] rounded-full"></div>
+              <div className="w-2 h-12 bg-linear-to-b from-[#0ff] to-[#f0f] rounded-full"></div>
               <h2 className="text-3xl font-bold text-[#0ff] drop-shadow-[0_0_10px_#0ff]">عن خدماتنا</h2>
             </div>
             <p className="text-xl leading-relaxed text-[#0ff]/80">{profile.description}</p>
@@ -784,12 +786,12 @@ const PremiumTemplatePC = ({ model }: Props) => {
             {profile.socials.map((social, index) => (
               <div
                 key={social.id}
-                className="rounded-2xl p-6 border-2 border-white/20 shadow-xl backdrop-blur-xl bg-black/30 cursor-pointer group hover:shadow-2xl transition-all animate-fade-in"
+                className="rounded-2xl p-6 border-2 border-white/20 shadow-xl backdrop-blur-xl bg-black/30 cursor-pointer group hover:shadow-2xl transition-all animate-fade-in overflow-hidden"
                 style={{ animationDelay: `${index * 0.1}s` }}
                 onClick={() =>openSocialLinkHelper(social.icon, social.value)}
               >
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-4">
+                <div className="flex items-center justify-between overflow-hidden">
+                  <div className="flex items-center gap-4 overflow-hidden">
                     <div className="p-4 rounded-2xl bg-white/10 group-hover:bg-white/20 transition-all group-hover:scale-110 transform">
                       {getSocialIconHelper(social.icon)}
                     </div>

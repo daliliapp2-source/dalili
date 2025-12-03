@@ -111,31 +111,6 @@ import { MapPin, Phone, Facebook, Instagram, Youtube, Twitter, Linkedin, Send, M
 import { Profilexx } from "./FreeTemplateA";
 import { getSocialIconHelper, openSocialLinkHelper } from "../menu/helpers";
 
-// --------- Helper functions ----------
-// const formatSocialUrl = (icon: string, value: string) => {
-//   value = value.trim();
-//   if (icon === "phone") return `tel:${value}`;
-//   if (icon === "whatsapp") {
-//     const digits = value.replace(/\D/g, "");
-//     return `https://wa.me/${digits}`;
-//   }
-//   if (!value.startsWith("http")) return `https://${value}`;
-//   return value;
-// };
-
-// const getSocialIcon = (iconName: string) => {
-//   switch (iconName) {
-//     case "whatsapp": return <MessageCircle className="w-5 h-5 text-green-600" />;
-//     case "phone": return <Phone className="w-5 h-5 text-blue-600" />;
-//     case "facebook": return <Facebook className="w-5 h-5 text-blue-700" />;
-//     case "instagram": return <Instagram className="w-5 h-5 text-pink-600" />;
-//     case "youtube": return <Youtube className="w-5 h-5 text-red-600" />;
-//     case "twitter": return <Twitter className="w-5 h-5 text-sky-500" />;
-//     case "tiktok": return <Send className="w-5 h-5 text-black" />;
-//     case "linkedin": return <Linkedin className="w-5 h-5 text-blue-700" />;
-//     default: return <Phone className="w-5 h-5" />;
-//   }
-// };
 
 
 type Props = {
@@ -201,7 +176,7 @@ const FreeTemplateProfileC = ({ model }: Props) => {
             </div>
 
             {/* Social Links */}
-            <div className="space-y-3">
+            <div className="space-y-3 overflow-hidden">
               <h3 className="text-xl font-semibold text-foreground mb-4">
                 تواصل معنا
               </h3>
@@ -211,10 +186,10 @@ const FreeTemplateProfileC = ({ model }: Props) => {
                   key={social.id}
                   variant="outline"
                   size="lg"
-                  className="w-full justify-between group hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all"
+                  className="w-full justify-between group hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all overflow-hidden"
                   onClick={() => {openSocialLinkHelper(social.icon,social.value);}}
                 >
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-3 overflow-hidden">
                     <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary-foreground/20">
                       {getSocialIconHelper(social.icon)}
                     </div>

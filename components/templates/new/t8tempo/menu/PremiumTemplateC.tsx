@@ -258,8 +258,10 @@ const categories = isMock
               ))}
             </div>
           )} */}
+
              {/* Social Icons */}
-           <div className="flex items-center gap-4 mt-6">
+
+           {/* <div className="flex items-center gap-4 mt-6">
              {profile.socials?.map((s: any) => (
             <Button
                key={s.id}
@@ -270,8 +272,21 @@ const categories = isMock
                {getSocialIconHelper(s.icon)}
             </Button>
             ))}
-           </div>
-
+           </div> */}
+   {/* Social Icons */}
+            <div className="flex flex-wrap justify-center gap-3">
+              {profile.socials.map(social => (
+                <Button
+                  key={social.id}
+                  variant="outline"
+                  size="icon"
+                  className="rounded-full bg-white/10 hover:bg-white/20"
+                  onClick={() => openSocialLinkHelper(social.icon, social.value)}
+                >
+                  {getSocialIconHelper(social.icon)}
+                </Button>
+              ))}
+            </div>
         </div>
 
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-slate-950 to-transparent"></div>
@@ -284,7 +299,7 @@ const categories = isMock
           <aside className="lg:w-64 shrink-0">
             <h2 className="text-2xl font-bold mb-6 text-red-400">قائمة الأقسام</h2>
             <nav className="space-y-2">
-              {allCategories.map((category) => (
+              {categories.map((category) => (
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category)}

@@ -190,26 +190,43 @@ const PremiumTemplatePA = ({ model }: Props) => {
         </div>
 
         {/* Social Links */}
-        <div className="bg-gradient-to-r from-slate-800 to-slate-900 rounded-2xl p-6 md:p-8 shadow-xl animate-fade-in">
+        <div className="bg-linear-to-r from-slate-800 to-slate-900 rounded-2xl p-6 md:p-8 shadow-xl animate-fade-in">
           <h3 className="text-xl md:text-2xl font-bold text-white mb-6 text-center">
             تواصل معنا الآن
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {profile.socials.map((social) => (
-              <Button
-                key={social.id}
-                size="lg"
-                className="h-16 bg-white hover:bg-amber-50 text-slate-900 text-lg font-semibold gap-3 shadow-lg hover:shadow-xl transition-all group border-2 border-transparent hover:border-amber-400"
-                onClick={() =>{openSocialLinkHelper(social.icon, social.value);}}
-              >
-                <div className="p-2 rounded-full bg-amber-100 group-hover:bg-amber-200 transition-colors">
-                  {getSocialIconHelper(social.icon)}
-                </div>
-               <div className="min-w-0">
-                 <span className="flex-1 text-right truncate">{social.name}</span>
-                <ExternalLink className="w-5 h-5 opacity-50 group-hover:opacity-100 transition-opacity truncate" />
-               </div>
-              </Button>
+
+
+              // <Button
+              //   key={social.id}
+              //   size="lg"
+              //   className="h-16 bg-white hover:bg-amber-50 text-slate-900 text-lg font-semibold gap-3 shadow-lg hover:shadow-xl transition-all group border-2 border-transparent hover:border-amber-400"
+              //   onClick={() =>{openSocialLinkHelper(social.icon, social.value);}}
+              // >
+              //   <div className="p-2 rounded-full bg-amber-100 group-hover:bg-amber-200 transition-colors">
+              //     {getSocialIconHelper(social.icon)}
+              //   </div>
+              //  <div className="min-w-0">
+              //    <span className="flex-1 text-right truncate">{social.name}</span>
+              //   <ExternalLink className="w-5 h-5 opacity-50 group-hover:opacity-100 transition-opacity truncate" />
+              //  </div>
+              // </Button>
+<Button
+  key={social.id}
+  size="lg"
+  className="flex justify-between items-center h-16 bg-white hover:bg-amber-50 text-slate-900 text-lg font-semibold gap-3 shadow-lg hover:shadow-xl transition-all group border-2 border-transparent hover:border-amber-400 overflow-hidden"
+  onClick={() => openSocialLinkHelper(social.icon, social.value)}
+>
+  <div className="p-2 rounded-full bg-amber-100 group-hover:bg-amber-200 transition-colors flex-shrink-0">
+    {getSocialIconHelper(social.icon)}
+  </div>
+  <div className="flex-1 flex justify-between items-center min-w-0">
+    <span className="truncate text-right">{social.name}</span>
+    <ExternalLink className="w-5 h-5 opacity-50 group-hover:opacity-100 transition-opacity flex-shrink-0" />
+  </div>
+</Button>
+
             ))}
           </div>
         </div>

@@ -48,6 +48,11 @@ const categories = isMock
             <MapPin className="w-4 h-4" />
             <span>{profile.address}</span>
           </div>
+
+
+
+
+          
         </div>
       </header>
 
@@ -59,7 +64,7 @@ const categories = isMock
             <h2 className="font-semibold text-lg">الأقسام</h2>
           </div>
           <div className="flex gap-2 overflow-x-auto pb-2">
-            {allCategories.map((category) => (
+            {categories.map((category) => (
               <Button
                 key={category}
                 variant={selectedCategory === category ? "default" : "outline"}
@@ -132,7 +137,8 @@ const categories = isMock
       {/* Footer */}
       <footer className="bg-linear-to-r from-amber-900 to-orange-900 text-white py-8 px-4 mt-12">
         <div className="max-w-6xl mx-auto text-center">
-          <div className="flex justify-center gap-4 mb-4">
+         
+          {/* <div className="flex justify-center gap-4 mb-4">
             {profile.socials.map((social) => (
               <Button
                 key={social.id}
@@ -143,7 +149,22 @@ const categories = isMock
                {getSocialIconHelper(social.icon)}
               </Button>
             ))}
-          </div>
+          </div> */}
+   {/* Social Icons */}
+            <div className="flex flex-wrap justify-center gap-3">
+              {profile.socials.map(social => (
+                <Button
+                  key={social.id}
+                  variant="outline"
+                  size="icon"
+                  className="rounded-full bg-white/10 hover:bg-white/20"
+                  onClick={() => openSocialLinkHelper(social.icon, social.value)}
+                >
+                  {getSocialIconHelper(social.icon)}
+                </Button>
+              ))}
+            </div>
+
           {/* <p className="text-sm text-amber-200">
             Menu – Premium Template B (Card Menu)
           </p> */}

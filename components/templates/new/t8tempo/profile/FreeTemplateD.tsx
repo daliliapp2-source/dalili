@@ -151,6 +151,8 @@ type Props = {
   model?: Profilexx;
 };
 
+
+
 const FreeTemplateProfileD = ({ model }: Props) => {
   const profile = model || profileWithoutMenu;
 
@@ -219,10 +221,10 @@ const FreeTemplateProfileD = ({ model }: Props) => {
                 
                 <Button
                   variant="outline"
-                  className="flex-1 h-auto p-6 justify-between group hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all rounded-2xl"
+                  className="flex-1 h-auto p-6 justify-between group hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all rounded-2xl overflow-hidden"
                   onClick={() =>{openSocialLinkHelper(social.icon, social.value);}}
                 >
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-4 overflow-hidden">
                     <div className="p-3 rounded-xl bg-primary/10 group-hover:bg-primary-foreground/20">
                       {getSocialIconHelper(social.icon)}
                     </div>

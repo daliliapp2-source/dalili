@@ -383,7 +383,7 @@ const categories = isMock
               <p className="text-[#005a7a]">{profile.description}</p>
             </div>
           </div>
-
+{/* 
           <div className="flex items-center gap-3">
             {profile.socials.map((social) => (
               <Button
@@ -395,7 +395,22 @@ const categories = isMock
                 {getSocialIconHelper(social.icon)}
               </Button>
             ))}
-          </div>
+          </div> */}
+     {/* Social Icons */}
+            <div className="flex flex-wrap justify-center gap-3">
+              {profile.socials.map(social => (
+                <Button
+                  key={social.id}
+                  variant="outline"
+                  size="icon"
+                  className="rounded-full bg-linear-to-br from-[#4aa8df] to-[#2f7eb4] hover:opacity-90"
+                  onClick={() => openSocialLinkHelper(social.icon, social.value)}
+                >
+                  {getSocialIconHelper(social.icon)}
+                </Button>
+              ))}
+            </div>
+
         </div>
       </header>
 

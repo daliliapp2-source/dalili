@@ -839,8 +839,26 @@ const categories = isMock
               <MapPin className="w-4 h-4" />
               <span>{profile.address}</span>
             </div>
+
+     {/* Social Icons */}
+            <div className="flex flex-wrap justify-center gap-3">
+              {profile.socials.map(social => (
+                <Button
+                  key={social.id}
+                  variant="outline"
+                  size="icon"
+                  className="rounded-full border-orange-700 hover:bg-orange-600 hover:border-orange-500 bg-gray-800"
+                  onClick={() => openSocialLinkHelper(social.icon, social.value)}
+                >
+                  {getSocialIconHelper(social.icon)}
+                </Button>
+              ))}
+            </div>
+
           </div>
         </div>
+
+
       </header>
 
 
@@ -947,28 +965,11 @@ const categories = isMock
         </div>
       </div>
 
-      {/* Footer */}
-      <footer className="bg-black/70 border-t border-orange-700 py-8 px-4 mt-12 relative z-10">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="flex justify-center gap-4 mb-4">
-          
-            {profile.socials.map((social) => (
-              <Button
-                key={social.id}
-                variant="outline"
-                size="icon"
-                className="rounded-full border-orange-700 hover:bg-orange-600 hover:border-orange-500 bg-gray-800"
-                onClick={() => {openSocialLinkHelper(social.icon, social.value);}}
-              >
-                {getSocialIconHelper(social.icon)}
-              </Button>
-            ))}
 
 
-          </div>
-          {/* <p className="text-sm text-orange-300">Menu – Premium Template E (Flame Grid)</p> */}
-        </div>
-      </footer>
+
+
+
 
       {/* Flame Animation CSS */}
       <style jsx>{`
@@ -1012,6 +1013,55 @@ const categories = isMock
 };
 
 export default PremiumTemplateE;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//       {
+// /* Footer */
+//     }
+//       <footer className="bg-black/70 border-t border-orange-700 py-8 px-4 mt-12 relative z-10">
+//         <div className="max-w-7xl mx-auto text-center">
+//           <div className="flex justify-center gap-4 mb-4">
+          
+//             {profile.socials.map((social) => (
+//               <Button
+//                 key={social.id}
+//                 variant="outline"
+//                 size="icon"
+//                 className="rounded-full border-orange-700 hover:bg-orange-600 hover:border-orange-500 bg-gray-800"
+//                 onClick={() => {openSocialLinkHelper(social.icon, social.value);}}
+//               >
+//                 {getSocialIconHelper(social.icon)}
+//               </Button>
+//             ))}
+
+
+//           </div>
+//           {/* <p className="text-sm text-orange-300">Menu – Premium Template E (Flame Grid)</p> */}
+//         </div>
+//       </footer>
+
+
+
+
+
+
+
+
+
+
+
 
 
 

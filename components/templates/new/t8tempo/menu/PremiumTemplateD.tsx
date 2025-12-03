@@ -491,6 +491,8 @@ type Props = {
   model?: Profilexm;
 };
 
+
+
 const PremiumTemplateD = ({ model }: Props) => {
   const profile = model || profileWithMenu;
 
@@ -622,6 +624,8 @@ const PremiumTemplateD = ({ model }: Props) => {
     );
   };
 
+
+  
   return (
     <div className="min-h-screen bg-slate-50" dir="rtl">
       {/* Header Section */}

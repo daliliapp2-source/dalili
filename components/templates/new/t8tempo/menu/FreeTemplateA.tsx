@@ -197,7 +197,7 @@ const categories = isMock
             <MapPin className="w-4 h-4" />
             <span>{profile.address}</span>
           </div>
-          <div className="flex justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-3">
             {profile.socials.map((social) => (
               <Button
                 key={social.id}
