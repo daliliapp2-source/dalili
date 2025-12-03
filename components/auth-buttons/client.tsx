@@ -113,11 +113,11 @@ export  function LinkLogo({ href }: { href: string }) {
        <Image 
         src="/bdqr.png" // استبدل بالمسار الصحيح للصورة في public أو assets
         alt="Logo"
-        width={32}   // 8 * 4px = 32px، نفس حجم h-8
+        width={60}   // 8 * 4px = 32px، نفس حجم h-8
         height={32}  // نفس الحجم عشان ما يتشوهش
         className="object-contain"
       />
-      <span>دليلي</span>
+      {/* <span>دليلي</span> */}
     </Link>
   );
 }
