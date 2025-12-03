@@ -38,13 +38,18 @@ export default function ProfileSlider({ profiles }: ProfileSliderProps) {
     setCurrentIndex((prev) => (prev + 1) % profiles.length);
   };
 
+
   return (
     <div
-      className="relative w-full max-w-md mx-auto"
+      // className="relative w-full max-w-md mx-auto"
+     className="relative w-full mx-auto overflow-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="relative h-80 rounded-xl overflow-hidden shadow-2xl">
+      {/* <div className="relative h-[300px] sm:h-[350px] md:h-[380px] lg:h-[420px] rounded-xl overflow-hidden shadow-2xl"> */}
+{/* <div className="relative h-[260px] xs:h-[300px] sm:h-[340px] md:h-[380px] lg:h-[420px] rounded-xl overflow-hidden shadow-2xl"> */}
+
        <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}

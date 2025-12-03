@@ -169,11 +169,20 @@ export default function Home() {
       </motion.div>
     </motion.div>
 
-
-<div className="md:w-1/2 mt-8 md:mt-0">
+{/* 
+<div className="md:w-1/2 mt-8 md:mt-0 ">
  <ProfileSlider profiles={profileExamples} />
-</div>
+</div> */}
 
+{/* <div className="md:w-1/2 mt-8 md:mt-0 min-h-[350px] flex items-center justify-center">
+  <ProfileSlider profiles={profileExamples} />
+</div> */}
+
+<div className="w-full md:w-1/2 mt-8 md:mt-0 flex items-center justify-center">
+  <div className="w-full">
+    <ProfileSlider profiles={profileExamples} />
+  </div>
+</div>
 
         </div>
       </section>
