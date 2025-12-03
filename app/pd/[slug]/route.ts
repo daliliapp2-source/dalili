@@ -3,7 +3,7 @@ import { decryptSlug } from "@/lib/slug-crypto";
 
 export async function GET(
    request: Request,
-  context: { params: Promise<{ slug: string }> }
+  context: { params: { slug: string } }
 
 ) {
   try {
