@@ -1,4 +1,4 @@
-import { createClient, createCliento } from '@/lib/supabase/server'
+import { createClient } from '@/lib/supabase/server'
 import { NextResponse } from 'next/server'
 import { redirect } from 'next/navigation'
 
@@ -8,7 +8,7 @@ export async function GET(request: Request) {
 
   if (!code) return NextResponse.redirect(`${process.env.NEXT_PUBLIC_SITE_URL}/`)
 
-  const supabase = await createCliento()
+  const supabase = await createClient()
   const { data, error } = await supabase.auth.exchangeCodeForSession(code)
 
   if (error) {

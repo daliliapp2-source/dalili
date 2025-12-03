@@ -5,7 +5,7 @@ import { encryptSlug } from "@/lib/slug-crypto";
 import { MenuItem } from '@/components/templates/new/t8tempo/mock';
 import { deleteImage, uploadImage } from '@/lib/cloudnery/cloudinary';
 import { DB, GeneralResponse } from '@/lib/db/repo';
-import { createClient, createCliento, createClientWithAuthHeader, createClientx } from '@/lib/supabase/server';
+import { createClient} from '@/lib/supabase/server';
 import { DataModelTODB } from './components';
 import { Profilexm } from '@/components/templates/new/t8tempo/menu/FreeTemplateA';
 import { createActionClient } from '@/lib/supabase/client';

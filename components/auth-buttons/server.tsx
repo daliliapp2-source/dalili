@@ -3,6 +3,7 @@ import { createClient } from "@/lib/supabase/server";
 import {ClientMenu, LinkLogo} from "./client";
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
+// import { createClient } from "../../lib/supabase/server";
 
 
 // ----------- SERVER COMPONENT -----------
