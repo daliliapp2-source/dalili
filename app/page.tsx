@@ -40,12 +40,14 @@
 import { FeatureItem, UseCase } from "@/components/landing/serversec";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { motion } from "framer-motion";
-import { CheckCircle, GraduationCap, Menu, QrCode, Star, Store, UserCircle, Utensils } from "lucide-react";
+import { CheckCircle, Facebook, GraduationCap, Instagram, Menu, MessageCircle, PlusCircle, QrCode, Star, Store, UserCircle, Utensils } from "lucide-react";
 import React from "react";
 import Image from "next/image";
 import LoginButton from "@/components/landing/loginbutton";
 import ProfileSlider from "@/components/landing/aaa";
 import Head from "next/head";
+import { Button } from "@/components/ui/button";
+import WhatsAppContactButton from "@/components/landing/bbb";
 
 
 export default function Home() {
@@ -121,7 +123,7 @@ export default function Home() {
   }, [api]);
 
 
-
+  // const handleAdd = () => router.push("/profile/add");
 
 
   
@@ -156,6 +158,7 @@ export default function Home() {
       animate="visible"
       variants={staggerContainer}
       className="md:w-1/2 text-center md:text-left"
+    
     >
       <motion.h1
         className="text-4xl md:text-6xl font-bold mb-6"
@@ -183,10 +186,75 @@ export default function Home() {
 
         {/* <LoginButton title="نقره واحده للبدأ" /> */}
      
-        <LoginButton title="نقره واحده للبدأ" />  
+        {/* <LoginButton title="نقره واحده للبدأ" />   */}
 
 
+  {/* Social Media Links */}
+           
+{/*            
+                <div className="flex items-center">
+                  <a 
+                    href="https://facebook.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="group relative flex items-center justify-center w-11 h-11 rounded-full bg-gradient-to-br from-blue-600 to-blue-700 text-white shadow-lg hover:shadow-blue-500/40 hover:scale-110 transition-all duration-300 z-10"
+                  >
+                    <Facebook className="h-5 w-5" />
+                  </a>
+                  <div className="w-6 h-1 bg-gradient-to-r from-blue-600 via-purple-500 to-pink-500 -mx-1 relative z-0" />
+                  <a 
+                    href="https://instagram.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="group relative flex items-center justify-center w-11 h-11 rounded-full bg-gradient-to-br from-pink-500 via-purple-500 to-orange-400 text-white shadow-lg hover:shadow-pink-500/40 hover:scale-110 transition-all duration-300 z-10"
+                  >
+                    <Instagram className="h-5 w-5" />
+                  </a>
+                   <div className="w-4 h-1 bg-gradient-to-r from-pink-500 via-red-400 to-green-500 -mx-1 relative z-0" />
+                  <a 
+                    href="https://wa.me/+201064845930" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="group relative flex items-center justify-center w-11 h-11 rounded-full bg-gradient-to-br from-green-500 to-green-600 text-white shadow-lg hover:shadow-green-500/40 hover:scale-110 transition-all duration-300 z-10"
+                  >
+                    <MessageCircle className="h-5 w-5" />
+                  </a>
+                </div>
+                 */}
+                
+{/* <div className="flex items-center justify-center">
+     
+      <div className="w-6 h-1 bg-gradient-to-r from-pink-500 via-red-400 to-green-500 rounded-full -mx-1" />
 
+ 
+      <a
+        href="https://wa.me/+201064845930" // ← ضع رقمك هنا
+        target="_blank"
+        rel="noopener noreferrer"
+        className="
+          group relative flex items-center justify-center 
+          w-12 h-12 rounded-full 
+          bg-linear-to-br from-green-500 to-green-600 
+          text-white shadow-lg 
+          hover:shadow-green-500/40 
+          hover:scale-110 
+          active:scale-95
+          transition-all duration-300
+        "
+      >
+        <MessageCircle className="h-6 w-6 drop-shadow-sm group-hover:rotate-3 transition" />
+      </a>
+    </div> */}
+
+<WhatsAppContactButton/>
+
+
+   {/* <Button size="sm" onClick={handleAdd}>
+              <PlusCircle className="mr-2 h-4 w-4" /> جديد
+            </Button> */}
+
+
+{/* <link> */}
 
 
       </motion.div>
@@ -408,7 +476,54 @@ export default function Home() {
           
           {/* <LoginButton title="ابدأ التجربة الآن" /> */}
       
-          <LoginButton    title="ابدأ التجربة الآن" />  
+          {/* <LoginButton    title="ابدأ التجربة الآن" />   */}
+
+  {/* Social Media Links */}
+                {/* <div className="flex items-center">
+                  <a 
+                    href="https://facebook.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="group relative flex items-center justify-center w-11 h-11 rounded-full bg-linear-to-br from-blue-600 to-blue-700 text-white shadow-lg hover:shadow-blue-500/40 hover:scale-110 transition-all duration-300 z-10"
+                  >
+                    <Facebook className="h-5 w-5" />
+                  </a>
+                  <div className="w-6 h-1 bg-linear-to-r from-blue-600 via-purple-500 to-pink-500 -mx-1 relative z-0" />
+                  <a 
+                    href="https://instagram.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="group relative flex items-center justify-center w-11 h-11 rounded-full bg-linear-to-br from-pink-500 via-purple-500 to-orange-400 text-white shadow-lg hover:shadow-pink-500/40 hover:scale-110 transition-all duration-300 z-10"
+                  >
+                    <Instagram className="h-5 w-5" />
+                  </a>
+                </div> */}
+<WhatsAppContactButton/>
+     
+{/* <div className="flex items-center justify-center">
+    
+      <div className="w-6 h-1 bg-linear-to-r from-pink-500 via-red-400 to-green-500 rounded-full -mx-1" />
+
+   
+      <a
+        href="https://wa.me/+201064845930" // ← ضع رقمك هنا
+        target="_blank"
+        rel="noopener noreferrer"
+        className="
+          group relative flex items-center justify-center 
+          w-12 h-12 rounded-full 
+          bg-linear-to-br from-green-500 to-green-600 
+          text-white shadow-lg 
+          hover:shadow-green-500/40 
+          hover:scale-110 
+          active:scale-95
+          transition-all duration-300
+        "
+      >
+        <MessageCircle className="h-6 w-6 drop-shadow-sm group-hover:rotate-3 transition" />
+      </a>
+    </div> */}
+
         </motion.div>
       </div>
     </section>
@@ -450,6 +565,7 @@ export default function Home() {
 
 
     </div>
+
 </>
   );
 

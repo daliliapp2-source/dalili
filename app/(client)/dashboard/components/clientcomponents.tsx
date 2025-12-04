@@ -776,7 +776,7 @@ function CompactPlanCard({
 
   // حساب السعر تلقائيًا
   const calculatePrice = (profiles: number, items: number, months: number = 1) => {
-    return (100 + profiles * 20 + items * 2) * months;
+    return (200 + profiles * 40 + items * 4) * months;
   };
   const [processing, setProcessing] = useState(false);
   const [visibleTime, setVisibleTime] = useState<number | null>(null);
@@ -1949,6 +1949,7 @@ const handleDelete = async (id: string) => {
 
   ///////
   const handleEdit = (id: string) => router.push(`/profile/edit/${id}`)
+
 
   async function handleView(slug: string) {
     router.push(`/profiles/${slug}`)
